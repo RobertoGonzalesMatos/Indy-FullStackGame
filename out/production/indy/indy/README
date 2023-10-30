@@ -1,0 +1,61 @@
+DESIGN CHOICES:
+
+Queues:
+For this project queues were essential. They were used in order to store the keys
+and check if they were added in order. This, thanks to its FIFO property which made
+the methods to change level and the method to detect which keys were collected easier.
+
+HashMaps:
+Hashmaps were used to link the key number to the key itself. This was extremely useful
+because it let me treat my keys as integers. Meaning that I can shuffle, store and,
+set an order for collection for the keys easily.
+
+Polymorphisms through inheritance:
+Inheritance was mainly used for the platforms. This came in very handy since I didn't
+need to repeat much of the code for each platform. Inheritance also made the creation
+of new types of platforms easier since I only need to worry about the specifics of it.
+
+Wrapper blueprint class:
+An interesting design choice I decided to make was to have 2 2DArrays for my board.
+One actually places all of the element in the level, while the other one serves as
+blueprint. This made it easy to design new levels and change existing ones. This
+"dummy" board in addition to the number of movements for a level and the number
+of keys were all delegated to a wrapper class called LevelChanger.
+
+Counters:
+Counters and counter methods were used throughout the whole game. They let me delay
+the actions of methods after an initial trigger. counters were mostly used for
+animation but also to give the input keys a cooldown.
+
+Record player position methods/safeReset:
+These types of methods store the X and Y position of the player's Block/Blocks
+in order to use it for another method. The recorder methods were used to know
+which lifePlatforms were used, in which direction must the TPPlatform teleport
+you and to make the safe reset button.
+
+Animations and parabola regression:
+One of the main visual features for the game are its animations. In order to
+do this, I had to calculate the parabola which would mark the trajectory for
+the animation considering the initial and final position. I also had to take
+into consideration when animation could be done and when should they be restricted.
+
+EXTRA CREDIT:
+1. Reset button that works at anytime, not including game over.
+    1.5 "Safe" Reset/Anti-Lag button that eliminates the lag and bugs,
+         but keeps all other aspects of the game the same
+2. Key animations
+3. Song (made by me) and sound effects.
+4. 7 levels
+5. Extra visuals/animations:
+       LightUp color change for blue and green platforms.
+       Heart appearing when a life is available on a LifePlatform
+6. Extra platform: Origin Platform
+
+BUGS:
+The games lags every so often due to the animations, which also affects other
+play features of the game like the separation platform animation methods.
+
+DEBUGGING COLLABORATORS:
+No collaborators.
+
+Hours: 80

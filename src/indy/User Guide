@@ -1,0 +1,62 @@
+User Guide:
+    Goal of the Game:
+    The goal of the game is to complete all 7 levels. Each level has from 2 to 5 keys.
+    The keys will appear in the same spaces but in random order. The player has to collect
+    all keys in order to complete a level. The platforms listed below, will be used throughout
+    the game to generate more interesting scenarios. The main gimmick of the game is that the
+    player can divide into two smaller blocks. In the big state the blocks can fall of the map,
+    while in the small state it can't. Thus if the two small blocks are in the same platform they
+    will join and form a big block again. There are also lives, the player starts with 3 but can
+    gain more through the LifePlat. If the player runs out of lives it is game over. The player can
+    loose lives by running out of movements or falling off the map. If so, the level will restart with
+    one less life.
+
+    Platforms:
+        Normal:
+            Color:MediumVioletRed
+            Has no Special power, just serves as a space that the player can move into
+        BigBPlat:
+            Color:Blue
+            Only lets movement if the player is the big block mode, and it will light up
+            when the player can use it
+        SmallBPlat
+            Color:Green
+            Only lets movement if the player is the small block mode, and it will light up
+            when the player can use it
+        EndPlat:
+            Color:Red
+            It is the platform that ends the level if all keys are collected in order
+        SeparationPlat
+            Color: Orange
+            Divides the big block player into two other blocks
+        LifePlat:
+            Color:Pink
+            Gives one extra life to the player if the player
+        TPPlat:
+            Color:Yellow
+            Teleports the player 2 spaces ahead in the direction that it is going
+        OriginPlat:
+            Color:Silver
+            Teleports the player to the origin
+
+    KeyInputs:
+        All of the key inputs are the same in the small state
+        The only difference is that the keys will move both
+        at the same time. This, if the block is allowed to move
+        if only one is allowed to move, only that block will move.
+
+        UP Arrow Key:
+            Moves the player one space Up
+        Down Arrow Key:
+            Moves the player one space Down
+        Right Arrow Key:
+            Moves the player one space Right
+        Left Arrow Key:
+            Moves the player one space Left
+        M:
+            Mutes the song
+    Limitations of the Game:
+        Sadly, there is a bug where the whole game lags after arbitrary time intervals.
+        Nonetheless, in order to fix the issue I created a button that eliminates the lag.
+        Also sometimes the separation platform won't instantiate the visual small blocks, but
+        they are logically there, the anti-lag button also solves this issue.
